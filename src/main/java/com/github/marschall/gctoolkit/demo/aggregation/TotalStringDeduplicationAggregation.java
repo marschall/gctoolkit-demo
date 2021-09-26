@@ -4,6 +4,6 @@ import com.microsoft.gctoolkit.aggregator.Aggregation;
 
 public interface TotalStringDeduplicationAggregation extends Aggregation {
 
-  public void addDataPoint(double reduction);
+  public void addReduction(double reduction);
 
 }

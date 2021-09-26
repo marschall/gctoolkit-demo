@@ -10,11 +10,11 @@ public class TotalStringDeduplication extends Aggregator<TotalStringDeduplicatio
 
   public TotalStringDeduplication(TotalStringDeduplicationAggregation results) {
     super(results);
-    this.register(G1ConcurrentStringDeduplication.class, this::extractHeapOccupancy);
+    this.register(G1ConcurrentStringDeduplication.class, this::extractStringReduction);
   }
 
-  private void extractHeapOccupancy(G1ConcurrentStringDeduplication event) {
-    this.aggregation().addDataPoint(event.getReduction());
+  private void extractStringReduction(G1ConcurrentStringDeduplication event) {
+    this.aggregation().addReduction(event.getReduction());
   }
 
 }

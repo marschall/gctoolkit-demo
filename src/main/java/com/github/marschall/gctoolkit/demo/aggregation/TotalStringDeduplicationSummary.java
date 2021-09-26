@@ -14,7 +14,7 @@ public class TotalStringDeduplicationSummary implements TotalStringDeduplication
   }
 
   @Override
-  public void addDataPoint(double reduction) {
+  public void addReduction(double reduction) {
     this.empty = false;
     this.totalReduction += 0.0d;
   }
